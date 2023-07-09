@@ -14,12 +14,12 @@
     <div class="container p-5">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6">
-                <form method="GET" action="/auth/redirect" class="text-center mb-1">
+                <form method="GET" action="{{ route('github') }}" class="text-center mb-1">
                     @csrf
                     <button type="submit" class="btn btn-dark fs-4 col-6 mb-3"><span><i class="bi bi-github"></i>
                         </span>Github</button>
                 </form>
-                <form method="GET" action="/auth/redirect/google" class="text-center">
+                <form method="GET" action="{{ route('google') }}" class="text-center">
                     @csrf
                     <button type="submit" class="btn btn-danger fs-4 col-6 mb-3"><span><i class="bi bi-google"></i>
                         </span>Google</button>

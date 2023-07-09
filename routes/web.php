@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 Route::get("/auth/redirect/google", function () {
     return Socialite::driver('google')->redirect();
-});
+})->name('google');
 
 Route::get("/auth/callback/google", function () {
     $googleUser = Socialite::driver('google')->stateless()->user();
@@ -49,7 +49,7 @@ Route::get("/auth/callback/google", function () {
 
 Route::get("/auth/redirect", function () {
     return Socialite::driver('github')->redirect();
-});
+})->name('github');
 
 Route::get("/auth/callback", function () {
     $githubUser = Socialite::driver('github')->stateless()->user();
